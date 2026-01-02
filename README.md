@@ -66,12 +66,3 @@
     <img src="https://github-profile-trophy.vercel.app/?username=kornect" alt="kornect" />
   </a>
 </p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kornect&show_icons=true&locale=en" alt="kornect stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=kornect&show_icons=true&locale=en&layout=compact" alt="kornect languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kornect&" alt="kornect streak" />
-</p>
