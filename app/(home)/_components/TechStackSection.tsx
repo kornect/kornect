@@ -49,15 +49,15 @@ const TechStackSection = () => {
         <>
             {/* Tech Stack Section */}
             <section className="py-10">
-                <div className="max-w-7xl mx-auto px-6 py-12 bg-white dark:bg-gray-900 shadow-lg border dark:border-gray-700 rounded">
+                <div className="max-w-7xl mx-auto px-6 py-10 md:py-12 bg-white dark:bg-gray-900 shadow-lg border dark:border-gray-700 rounded">
                     <header className="mb-12">
-                        <h3 className="text-4xl mb-4">Tech Stack</h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-lg">
+                        <h3 className="text-3xl md:text-4xl mb-4">Tech Stack</h3>
+                        <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">
                             Technologies and tools I work with to build robust solutions
                         </p>
                     </header>
 
-                    <div className="grid gap-8 grid-cols-4">
+                    <div className="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                         {techStack.map((group, index) => (
                             <TechStackGroup key={index} group={group}/>
                         ))}

@@ -13,15 +13,15 @@ const StatsSection = () => {
                         </div>
                         <div>
                             <div className="text-4xl md:text-5xl mb-2">15+</div>
-                            <div className="text-gray-600">Major Projects</div>
+                            <div className="text-gray-600">Production Systems Delivered</div>
                         </div>
                         <div>
-                            <div className="text-4xl md:text-5xl mb-2">1000+</div>
-                            <div className="text-gray-600">Cups of Coffee</div>
+                            <div className="text-4xl md:text-5xl mb-2">3+</div>
+                            <div className="text-gray-600">Industries Served</div>
                         </div>
                         <div>
-                            <div className="text-4xl md:text-5xl mb-2">100+</div>
-                            <div className="text-gray-600">Craft Beers</div>
+                            <div className="text-4xl md:text-5xl mb-2">100%</div>
+                            <div className="text-gray-600">Ownership</div>
                         </div>
                     </div>
                 </div>

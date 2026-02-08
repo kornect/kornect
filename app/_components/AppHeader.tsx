@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/dist/client/link";
+import {Image} from "next/dist/client/image-component";
 
 const AppHeader = () => {
     return (
@@ -23,7 +24,10 @@ const AppHeader = () => {
 
 
                 <div>
-                    <Link className="bg-yellow-300 text-black" href="#contact">Quill Qode</Link>
+                    <Link className="bg-yellow-300 text-black" href="#contact">
+                        <Image className="rounded-full inline" src="images/quillqode.png" height={50} width={50}
+                               alt="Quill Qode Logo"/>
+                        Work with me</Link>
                 </div>
             </div>
         </header>
