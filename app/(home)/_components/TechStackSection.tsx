@@ -1,45 +1,71 @@
 import React from 'react'
-import {TechStackItem} from "@/app/(home)/_components/TechStackItem";
+import {TechGroup, TechStackGroup} from "@/app/(home)/_components/TechStackGroup";
 
 const TechStackSection = () => {
     const techStack = [
-        {name: 'C#', icon: 'logos:c-sharp'},
-        {name: 'JavaScript', icon: 'logos:javascript'},
-        {name: 'TypeScript', icon: 'logos:typescript-icon'},
-        {name: 'Python', icon: 'logos:python'},
-        {name: 'Swift', icon: 'logos:swift'},
-        {name: 'Angular', icon: 'logos:angular-icon'},
-        {name: '.NET Core', icon: 'logos:dotnet'},
-        {name: 'MAUI', icon: null},
-        {name: 'Azure', icon: 'logos:microsoft-azure'},
-        {name: 'AWS', icon: 'logos:aws'},
-        {name: 'SQL Server', icon: 'logos:microsoft-icon'},
-        {name: 'PostgreSQL', icon: 'logos:postgresql'},
-        {name: 'Oracle', icon: 'logos:oracle'},
-        {name: 'Git', icon: 'logos:git-icon'},
-        {name: 'Docker', icon: 'logos:docker-icon'},
-        {name: 'Apache Airflow', icon: 'logos:apache'},
-        {name: 'Azure DevOps', icon: 'logos:azure-icon'},
-        {name: 'Nuxt', icon: 'logos:nuxt-icon'},
-        {name: 'Supabase', icon: 'logos:supabase-icon'},
-    ];
+        {
+            name: 'Core Languages',
+            items: [
+                {name: 'C#', icon: 'logos:c-sharp'},
+                {name: 'JavaScript', icon: 'logos:javascript'},
+                {name: 'TypeScript', icon: 'logos:typescript-icon'},
+                {name: 'Python', icon: 'logos:python'},
+                {name: 'Swift', icon: 'logos:swift'},
+            ]
+        },
+        {
+            name: 'Frameworks & Platforms',
+            items: [
+                {name: '.NET Core', icon: 'logos:dotnet'},
+                {name: 'MAUI', icon: 'logos:dotnet'},
+                {name: 'Angular', icon: 'logos:angular-icon'},
+                {name: 'Nextjs', icon: 'logos:nextjs-icon'},
+                {name: 'Nestjs', icon: 'logos:nestjs-icon'},
+            ]
+        },
+        {
+            name: 'Cloud & Infrastructure',
+            items: [
+                {name: 'Azure', icon: 'logos:microsoft-azure'},
+                {name: 'AWS', icon: 'logos:aws'},
+                {name: 'Docker', icon: 'logos:docker-icon'},
+                {name: 'Supabase', icon: 'logos:supabase-icon'},
+                {name: 'Firebase', icon: 'logos:firebase-icon'},
+            ]
+        },
+        {
+            name: 'Data & Tooling',
+            items: [
+                {name: 'Azure DevOps', icon: 'logos:azure-icon'},
+                {name: 'Github', icon: 'logos:github-icon'},
+                {name: 'SQL Server', icon: 'logos:microsoft-icon'},
+                {name: 'PostgreSQL', icon: 'logos:postgresql'},
+                {name: 'Oracle', icon: 'logos:oracle'},
+            ]
+        }
+    ] as TechGroup[];
 
     return (
         <>
             {/* Tech Stack Section */}
-            <section id="stack" className="">
-                <div className="max-w-7xl mx-auto px-6 py-16">
-                    <div className="mb-12">
+            <section className="py-10">
+                <div className="max-w-7xl mx-auto px-6 py-12 bg-white dark:bg-gray-900 shadow-lg border dark:border-gray-700 rounded">
+                    <header className="mb-12">
                         <h3 className="text-4xl mb-4">Tech Stack</h3>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 dark:text-gray-400 text-lg">
                             Technologies and tools I work with to build robust solutions
                         </p>
-                    </div>
-                    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        {techStack.map((tech, index) => (
-                            <TechStackItem key={index} name={tech.name} icon={tech.icon}/>
+                    </header>
+
+                    <div className="grid gap-8 grid-cols-4">
+                        {techStack.map((group, index) => (
+                            <TechStackGroup key={index} group={group}/>
                         ))}
                     </div>
+
+                    <p className="mt-10 text-center text-gray-600 dark:text-gray-400 font-inter italic">
+                        Tools evolve — strong system design, clear trade-offs, and long-term thinking do not.
+                    </p>
                 </div>
             </section>
         </>

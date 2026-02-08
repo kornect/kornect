@@ -5,6 +5,7 @@ import AppFooter from "@/app/_components/AppFooter";
 import React from "react";
 import {CircuitBackground} from "@/app/(home)/_components/CircuitBackground";
 import Link from "next/dist/client/link";
+import {ThemeToggle} from "@/app/(home)/_components/ThemeToggle";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -28,7 +29,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
+        <head>
+            <script dangerouslySetInnerHTML={{
+                __html: `(function(){try{var s=localStorage.getItem('theme');if(s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})();`
+            }}/>
+        </head>
         <body className={`${inter.variable} ${poppins.variable} antialiased min-h-screen relative`}>
         {/* CPU Background */}
         <CircuitBackground/>
@@ -48,20 +54,23 @@ export default function RootLayout({
             </ul>
         </div>
 
-        <header className=" bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <h1 className="font-semibold text-2xl">mogau_im.</h1>
                 <nav className="hidden md:flex items-center gap-8">
-                    <a href="#home" className="text-gray-700 hover:text-black transition-colors">Home</a>
-                    <a href="#about" className="text-gray-700 hover:text-black transition-colors">About</a>
-                    <a href="#projects" className="text-gray-700 hover:text-black transition-colors">Projects</a>
-                    <a href="#stack" className="text-gray-700 hover:text-black transition-colors">Tech Stack</a>
-                    <a href="#experience" className="text-gray-700 hover:text-black transition-colors">Experience</a>
+                    <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Home</a>
+                    <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">About</a>
+                    <a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Projects</a>
+                    <a href="#stack" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Tech Stack</a>
+                    <a href="#experience" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Experience</a>
                 </nav>
-                <Link target="_blank" href="https://quillqode.com"
-                      className="bg-yellow-300 hover:bg-yellow-400 px-4 py-2 rounded transition-colors font-bold">
-                    Quill Qode
-                </Link>
+                <div className="flex items-center gap-3">
+                    <ThemeToggle/>
+                    <Link target="_blank" href="https://quillqode.com"
+                          className="bg-yellow-300 hover:bg-yellow-400 px-4 py-2 rounded transition-colors font-bold font-inter text-black">
+                        Work with me
+                    </Link>
+                </div>
             </div>
         </header>
 

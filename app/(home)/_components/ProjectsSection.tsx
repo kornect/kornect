@@ -43,15 +43,15 @@ const ProjectsSection = () => {
 
     return (
         <>      {/* Completed Projects Section */}
-            <section id="projects" className="bg-gray-50">
+            <section id="projects" className="bg-gray-50 dark:bg-gray-900/50">
                 <div className="max-w-7xl mx-auto px-6 py-16">
                     <div className="mb-12">
                         <h3 className="text-4xl mb-4">Completed Projects</h3>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 dark:text-gray-400 text-lg">
                             A selection of enterprise solutions and platforms I&#39;ve built over the years
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
                         {projects.map((project, index) => (
                             <ProjectCard key={index} {...project} />
                         ))}

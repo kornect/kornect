@@ -4,38 +4,36 @@ import Link from "next/dist/client/link";
 
 const AboutMeSection = () => {
     return (
-        <div id="about" className="relative overflow-hidden">
+        <div id="about" className="relative overflow-hidden mb-10">
             <div
-                className="grid md:grid-cols-2 gap-12 items-start p-10 z-10 bg-white max-w-7xl mx-auto px-6 border rounded">
+                className="grid md:grid-cols-2 gap-12 items-start p-10 z-10 bg-white dark:bg-gray-900 max-w-7xl mx-auto px-6 border dark:border-gray-700 shadow-lg rounded">
                 <div>
                     <h2 className="text-3xl font-bold mb-4 font-poppins">About Me</h2>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                        I'm a Senior Software Developer with over 10 years of experience in energy, retail, and
-                        financial systems.
-                        I specialize in building scalable cloud-native systems and mission-critical platforms. I’m
-                        passionate about clean architecture,
-                        elegant code, and mentoring development teams.
-                    </p>
-                    <p className="text-sm italic text-gray-500 border-l-4 border-black pl-4">
-                        “Designing custom solutions that create real value and solve real problems.”
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                        My focus is on clean architecture, scalability, and long-term maintainability — not just getting
+                        software shipped, but getting it right. I work closely with founders and engineering teams to
+                        turn ambiguous problems into reliable, production-ready systems.
                     </p>
                 </div>
 
-                <div className="p-6 rounded-lg relative bg-gray-100">
-                    <h2 className="text-2xl inline font-semibold mb-3 font-poppins">
-                        QuillQode | Studio
+                <div className="p-6 rounded relative bg-gray-50 dark:bg-gray-800">
+                    <h2 className="text-2xl font-semibold mb-4 font-poppins">
+                        Quill Qode | Studio
                     </h2>
-                    <p className="text-gray-700 leading-relaxed mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                         Quill Qode is my development studio where I craft tailored web, mobile, and cloud applications
                         for startups and enterprises alike.
-                        From MVPs to full-stack solutions, I bring strategic insight and technical excellence to every
-                        engagement.
+                        From MVPs to mission-critical systems.
                     </p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"> I bring strategic insight and technical
+                        excellence to
+                        every
+                        engagement.</p>
                     <Link
                         href="#contact"
-                        className="inline-block mt-2 px-5 py-3 bg-black text-white rounded hover:bg-gray-800 transition"
+                        className="inline-block text-right mt-2 px-5 py-3 bg-black text-white dark:bg-yellow-300 dark:text-black rounded hover:bg-gray-800 dark:hover:bg-yellow-400 transition"
                     >
-                        Hire Me
+                        Work with me through Quill Qode
                     </Link>
                 </div>
             </div>

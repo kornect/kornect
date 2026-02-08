@@ -89,7 +89,7 @@ export function CircuitBackground() {
                         <circle cx="150" cy="210" r="3" fill="currentColor"/>
                     </pattern>
                 </defs>
-                <rect width="100%" height="100%" fill={`url(#${patternId})`} className="text-gray-900"/>
+                <rect width="100%" height="100%" fill={`url(#${patternId})`} className="text-gray-900 dark:text-gray-100"/>
             </svg>
         </div>
     );
