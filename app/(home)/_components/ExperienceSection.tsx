@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 type ExperienceItem = {
     role: string;
@@ -46,8 +45,8 @@ const experiences: ExperienceItem[] = [
 const ExperienceSection = () => {
     return (
         <section id="experience" className="bg-gray-50 dark:bg-gray-900/50">
-            <div className="max-w-7xl mx-auto py-6 py-12 md:py-16">
-                <div className="mb-12 px-6">
+            <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+                <div className="mb-12">
                     <h3 className="text-3xl md:text-4xl mb-4">Work Experience</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">
                         Experience highlights extracted from my resume and focused on production software delivery.
@@ -92,17 +91,6 @@ const ExperienceSection = () => {
                             </ul>
                         </article>
                     ))}
-                </div>
-
-                <div className="mt-8">
-                    <Link
-                        href="/documents/Mogau Mokgabudi - Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-yellow-300 hover:bg-yellow-400 text-black font-semibold px-4 py-2 rounded transition-colors"
-                    >
-                        View Full Resume
-                    </Link>
                 </div>
             </div>
         </section>
