@@ -1,5 +1,7 @@
 import type {NextConfig} from "next";
 
+const repo = "/kornect"
+
 const nextConfig: NextConfig = {
     output: "export",
     images: {
@@ -8,7 +10,9 @@ const nextConfig: NextConfig = {
     reactCompiler: true,
     experimental: {
         turbopackFileSystemCacheForDev: true
-    }
+    },
+    basePath: repo,
+    assetPrefix: repo,
 };
 
 export default nextConfig;
