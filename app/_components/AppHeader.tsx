@@ -16,7 +16,6 @@ const AppHeader = () => {
                 <nav className="hidden md:flex gap-8 text-sm text-gray-700">
                     <Link href="/" className="hover:text-black transition">Home</Link>
                     <Link href="#about" className="hover:text-black transition">About</Link>
-                    <Link href="#projects" className="hover:text-black transition">Projects</Link>
                     <Link href="#tech" className="hover:text-black transition">Tech Stack</Link>
                     <Link href="#experience" className="hover:text-black transition">Experience</Link>
                     <Link href="/studio" className="hover:text-black transition">Studio</Link>

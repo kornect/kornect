@@ -60,7 +60,6 @@ export default function RootLayout({
                 <nav className="hidden md:flex items-center gap-8">
                     <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Home</a>
                     <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">About</a>
-                    <a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Projects</a>
                     <a href="#stack" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Tech Stack</a>
                     <a href="#experience" className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors">Experience</a>
                 </nav>
