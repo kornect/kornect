@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
     reactCompiler: true,
     experimental: {
         turbopackFileSystemCacheForDev: true
-    }
+    },
+    assetPrefix: "/kornect",
 };
 
 export default nextConfig;
